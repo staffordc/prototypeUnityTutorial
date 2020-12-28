@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     // Private Variables
     private float speed = 8.0f;
-    private float turnSpeed = 10.0f;
+    private float turnSpeed = 15.0f;
     private float horizontalInput;
     private float forwardInput;
 
@@ -16,8 +16,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // This is where we get player input
-        horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");        
+        //horizontalInput = Input.GetAxis("Horizontal");
+        //forwardInput = Input.GetAxis("Vertical");        
 
         //What angle do we have as speedup 
         //slowdown angle 
