@@ -8,14 +8,14 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    
     public TextMeshProUGUI countText;
     private int count;
     public GameObject winTextObject;
     public Button playAgainBtn;
     public Button quitButton;
     public GameObject menuCluster;
-    
+    public GameObject spriteCheck;
+
     private ParticleSystem parTicleSystem;
 
     public float speed = 10;
@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
             collider.gameObject.GetComponent<BoxCollider>().enabled = false;
             parTicleSystem = collider.gameObject.GetComponentInChildren<ParticleSystem>(includeInactive: true);
             parTicleSystem.Play();
-            //Debug.Log("It is on now??? " + isThisOn.ToString());
+            Debug.Log("It is on now??? " + gameObject.ToString());
 
             StartCoroutine(TimeTrouble());
 

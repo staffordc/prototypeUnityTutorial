@@ -301,6 +301,7 @@ MonoBehaviour:
   playAgainBtn: {fileID: 1299419569}
   quitButton: {fileID: 1407729255}
   menuCluster: {fileID: 1449507051}
+  spriteCheck: {fileID: 377316030}
   speed: 50
 --- !u!54 &116434372
 Rigidbody:
@@ -789,8 +790,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1830354474}
-  m_RootOrder: 0
+  m_Father: {fileID: 1449507052}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1734,6 +1735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3f6e86fbe257d4d8cb68fa47031118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pAActions: {fileID: 0}
 --- !u!1 &1368596509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1903,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quitButton: {fileID: 1407729255}
-  spriteCheck: {fileID: 377316030}
 --- !u!1 &1449507051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,8 +1933,9 @@ RectTransform:
   - {fileID: 350508723}
   - {fileID: 1407729254}
   - {fileID: 1299419568}
+  - {fileID: 377316031}
   m_Father: {fileID: 1830354474}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2051,7 +2053,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1830354474}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2830,7 +2832,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 377316031}
   - {fileID: 1465379208}
   - {fileID: 1449507052}
   m_Father: {fileID: 0}

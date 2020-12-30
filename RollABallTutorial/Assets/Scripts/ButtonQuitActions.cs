@@ -10,7 +10,6 @@ public class ButtonQuitActions : MonoBehaviour
     //float posiPntWidth;
     GameObject Player;
     [SerializeField] Button quitButton;
-    [SerializeField] GameObject spriteCheck;
     
     void Start()
     {
@@ -19,8 +18,6 @@ public class ButtonQuitActions : MonoBehaviour
         //posiPntHeight = FindObjectOfType<Canvas>().transform.position.y;
 
         //Vector3 player2Posi = new Vector3(posiPntWidth, posiPntHeight, -5f);
-
-        spriteCheck.SetActive(false);
 
         quitButton.onClick.AddListener(OnButtonClick);
         
@@ -44,8 +41,8 @@ public class ButtonQuitActions : MonoBehaviour
         //PosiPointCalculations();
         //Debug.Log("The Position was calculated");
         // spriteCheck.transform.position = player2Posi;
+
         Vector3 playerTranCurrent = Player.transform.position;
-        spriteCheck.SetActive(true);
         Debug.Log("Ball's position: " + playerTranCurrent);
     }
 
