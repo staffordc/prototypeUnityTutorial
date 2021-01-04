@@ -4924,6 +4924,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39eaf1e5971910345b2072a138d3a217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundOne: {fileID: 8300000, guid: 849e868e967c49b4d9bfc5d7c691630c, type: 3}
+  soundTwo: {fileID: 8300000, guid: 80f47b659f8e42f4ba22058624fde569, type: 3}
+  soundThree: {fileID: 8300000, guid: fe1991f4e4e844e4ab6af2a61fcfd7bb, type: 3}
+  soundFour: {fileID: 8300000, guid: 4146c47109629b0419ffd5d001e6bba0, type: 3}
+  soundFive: {fileID: 8300000, guid: 2e80260cf3c9ff94183082ee93bb5508, type: 3}
+  soundSix: {fileID: 8300000, guid: 47779f49a522c8f40987159754fbd972, type: 3}
+  soundSeven: {fileID: 8300000, guid: 5b6f78c3223e7c54e884288e4ee49ae2, type: 3}
 --- !u!54 &7783575820510620190
 Rigidbody:
   m_ObjectHideFlags: 0

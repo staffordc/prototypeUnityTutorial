@@ -8,6 +8,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public TextMeshProUGUI countText;
     private int count;
     public GameObject winTextObject;
@@ -86,7 +87,10 @@ public class PlayerController : MonoBehaviour
         {
             var barValue = gameObject.name.ToString();
             Debug.Log("It is on now??? " + barValue);
-            collider.GetComponent<Rigidbody>().AddForce(new Vector3(movementX, movementY, gameObject.transform.position.z));
+
+            
+            
+            //collider.GetComponent<Rigidbody>().AddForce(new Vector3(movementX, movementY, gameObject.transform.position.z));
         }
 
     }
