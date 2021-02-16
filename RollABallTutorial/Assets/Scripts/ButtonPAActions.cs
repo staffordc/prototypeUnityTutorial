@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ButtonPAActions : MonoBehaviour
 {
-    [SerializeField] Button pAActions;
-    // Start is called before the first frame update
+    GameObject Player;
+    [SerializeField] Button playButton;
     void Start()
     {
-
-        //canvasWidth = canvas.GetComponent<RectTransform>().rect.width;
-        //canvasHeight = canvas.GetComponent<RectTransform>().rect.height;
-             
+        playButton.onClick.AddListener(OnButtonClick);
+        Player = FindObjectOfType<PlayerController>().gameObject;
+    }
+    void OnButtonClick() 
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    // Update is called once per frame
     void Update()
     {
         

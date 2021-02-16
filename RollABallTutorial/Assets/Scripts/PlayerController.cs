@@ -2,31 +2,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    float whatSound;
+
     public TextMeshProUGUI countText;
     private int count;
     public GameObject winTextObject;
     public Button playAgainBtn;
     public Button quitButton;
     public GameObject menuCluster;
-    public GameObject spriteCheck;
 
-    private ParticleSystem parTicleSystem;
+    public GameObject collisionBarHit;
+    public GameObject pickUpSpark;
 
     public float speed = 10;
-
     private Rigidbody playerRB;
 
-    private bool isThisOn;
-    private bool isMenuOn;
     private float movementX;
     private float movementY;
+
+    public List<AudioClip> audioClipNumbers;
+    public AudioSource loudMouth;
+
+
     void Start()
     {
         playAgainBtn = menuCluster.GetComponentInChildren<ButtonPAActions>()
@@ -51,7 +55,7 @@ public class PlayerController : MonoBehaviour
     {
         countText.text = "Count: " + count.ToString();
 
-        if (count >= 2)
+        if (count >= 6)
         {
             OnOffUIelements(true);
         }
@@ -68,46 +72,70 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter(Collider collider)
     {
-
+        WhichSound();
         if (collider.gameObject.CompareTag("PickUp"))
         {
-            collider.gameObject.GetComponent<MeshRenderer>().enabled = false;
-            collider.gameObject.GetComponent<BoxCollider>().enabled = false;
-            parTicleSystem = collider.gameObject.GetComponentInChildren<ParticleSystem>(includeInactive: true);
-            parTicleSystem.Play();
-            Debug.Log("It is on now??? " + gameObject.ToString());
-
-            StartCoroutine(TimeTrouble());
+            var pickMeUpFrom = gameObject.transform.position;
+            var spark = Instantiate(pickUpSpark, pickMeUpFrom, Quaternion.identity);
+                        
+            StartCoroutine(ParticleTiming(spark));
 
             count += 1;
+            Destroy(collider.gameObject);
             SetCountText();
-        }
-
-        if (collider.gameObject.CompareTag("Barrier"))
-        {
-            var barValue = gameObject.name.ToString();
-            Debug.Log("It is on now??? " + barValue);
-
-            
-            
-            //collider.GetComponent<Rigidbody>().AddForce(new Vector3(movementX, movementY, gameObject.transform.position.z));
-        }
-
+        }        
     }
 
-    private IEnumerator TimeTrouble()
+    public void OnCollisionStay(Collision collision)
     {
-        //isThisOn = parTicleSystem.emission.enabled;
-        yield return new WaitForSeconds(3f);
-        parTicleSystem.Stop();
-        //Debug.Log("it's not on now..." + isThisOn.ToString());
-       
+        if (collision.gameObject.CompareTag("Barrier"))
+        {
+            
+            Vector3 playerPositionForLogs = new Vector3(playerRB.position.x, playerRB.position.y, playerRB.position.z);
+            
+            foreach (ContactPoint contact in collision.contacts)
+            {
+                Quaternion hitRotation = contact.thisCollider.transform.rotation;
+                Vector3 pointOfContact = contact.point;
+
+                Debug.DrawLine(contact.point, playerPositionForLogs, Color.red);
+                Debug.DrawRay(contact.point, contact.normal, Color.white, 6);
+
+                //if (// >= 2f) 
+                {
+                    var spark = Instantiate(collisionBarHit, pointOfContact, hitRotation);
+                    StartCoroutine(ParticleTiming(spark));   
+                }
+            }
+        }  
+    }
+
+    public void WhichSound()
+    {
+        int noAudio = audioClipNumbers.Count;
+        Debug.Log(noAudio);
+        int whatSound = UnityEngine.Random.Range(0, noAudio);
+
+        var valueOfSoundPlayed = whatSound.ToString();
+        Debug.Log("Sound Clip " + valueOfSoundPlayed + " was played");
+
+        loudMouth.PlayOneShot(audioClipNumbers[whatSound]);
+        
+    }
+
+
+    private IEnumerator ParticleTiming(GameObject sortingPartType) 
+    {
+        float particleTimeLength = sortingPartType.GetComponent<ParticleSystem>().main.duration;
+        yield return new WaitForSeconds(particleTimeLength);        
+        Destroy(sortingPartType, particleTimeLength);
+        
+        
     }
 
     private void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-
         playerRB.AddForce(movement * speed);
     }
 }

@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/RooooolATut.unity
     guid: 22bf907db1126ef4183be1561c136f08
+  - enabled: 1
+    path: Assets/Scenes/BarrierBreak.unity
+    guid: 7c223f7d395900847951e7a65b476808
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: d6ac46af7b5b7c64a98c2def8da35216,
       type: 2}
