@@ -6,9 +6,6 @@ using UnityEngine.UI;
 
 public class ButtonQuitActions : MonoBehaviour
 {
-    //Vector3 player2Posi;
-    //float posiPntHeight;
-    //float posiPntWidth;
     GameObject Player;
     [SerializeField] Button quitButton;
     

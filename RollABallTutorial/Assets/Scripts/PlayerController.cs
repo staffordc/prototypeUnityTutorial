@@ -9,8 +9,6 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    float whatSound;
-
     public TextMeshProUGUI countText;
     private int count;
     public GameObject winTextObject;
@@ -55,7 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         countText.text = "Count: " + count.ToString();
 
-        if (count >= 6)
+        if (count >= 7)
         {
             OnOffUIelements(true);
         }
