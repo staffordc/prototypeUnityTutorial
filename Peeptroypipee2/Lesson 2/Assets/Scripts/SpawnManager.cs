@@ -8,11 +8,11 @@ public class SpawnManager : MonoBehaviour
     private int animalIndex;
     private float spawnRangeX = 20;
     private float spawnPosZ = 20;
+    
 
     private void Start()
     {
         InvokeRepeating(nameof(SpawnRandomAnimal), 2, 1.5f);
-
     }
     void SpawnRandomAnimal() 
     {
