@@ -18,7 +18,6 @@ public class DestroyOutOfBounds : MonoBehaviour
 
         if (positionZed >= offScreen || positionZed <= -offScreen)
         {
-            Debug.Log("This guy " + gameObject.name + " has disappeared");
             Destroy(gameObject);
         }
     }

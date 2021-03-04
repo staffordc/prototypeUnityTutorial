@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c31e4dcaab83f41a4d024f7a386c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offScreen: 20
