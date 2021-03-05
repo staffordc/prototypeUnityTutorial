@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53913d73a09f8a488a0c11c102a22c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offScreen: 50
+  offScreen: 30
 --- !u!54 &54827946938200796
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33c31e4dcaab83f41a4d024f7a386c94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offScreen: 20

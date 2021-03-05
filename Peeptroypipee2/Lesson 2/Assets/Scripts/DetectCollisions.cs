@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    // Start is called before the first frame update
+    float positionZed;
+    float posScreen;
+
     void Start()
     {
-        
+        posScreen = FindObjectOfType<DestroyOutOfBounds>().offScreen;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        positionZed = gameObject.transform.position.z;
     }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (positionZed <= posScreen || positionZed >= posScreen)
+        { Debug.Log("This guy " + gameObject.name + " has disappeared"); }
         Destroy(gameObject);
         Destroy(other.gameObject);
     }
