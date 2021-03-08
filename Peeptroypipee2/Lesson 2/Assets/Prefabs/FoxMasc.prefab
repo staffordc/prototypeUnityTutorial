@@ -330,9 +330,9 @@ GameObject:
   m_Component:
   - component: {fileID: 723077970106938608}
   - component: {fileID: 723077970116654918}
+  - component: {fileID: 6831254848111551049}
   - component: {fileID: 3552057142361628057}
   - component: {fileID: 114583777089811438}
-  - component: {fileID: 6831254848111551049}
   - component: {fileID: 114292529738660274}
   m_Layer: 0
   m_Name: FoxMasc
@@ -386,6 +386,19 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &6831254848111551049
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723077970107133938}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06537743, y: 0.41727635, z: 0.34009048}
+  m_Center: {x: 0.00023479461, y: 0.20791872, z: 0.008517027}
 --- !u!114 &3552057142361628057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,20 +424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53913d73a09f8a488a0c11c102a22c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offScreen: 30
---- !u!65 &6831254848111551049
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723077970107133938}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.06537743, y: 0.41727635, z: 0.34009048}
-  m_Center: {x: 0.00023479461, y: 0.20791872, z: 0.008517027}
+  topScreen: 25
+  botScreen: -20
 --- !u!114 &114292529738660274
 MonoBehaviour:
   m_ObjectHideFlags: 0

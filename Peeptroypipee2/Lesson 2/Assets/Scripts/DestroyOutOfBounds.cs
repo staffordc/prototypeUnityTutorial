@@ -13,20 +13,18 @@ public class DestroyOutOfBounds : MonoBehaviour
         flipUI = FindObjectOfType<FlipUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
         float positionZed = gameObject.transform.position.z;
-
-        if (positionZed <= botScreen)
-        {
-            flipUI.Destroy_Counter();
-        }
 
         if (positionZed >= topScreen || positionZed <= botScreen)
         {
             Destroy(gameObject);
+
+            if (positionZed < -10)
+            {
+                flipUI.Destroy_Counter();
+            }
         }
     }
 }

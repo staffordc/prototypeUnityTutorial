@@ -28,12 +28,4 @@ public class SpawnManager : MonoBehaviour
         Instantiate(animalPrefabs[animalIndex], spawnPos,
             animalPrefabs[animalIndex].transform.rotation);
     }
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
- 
-    }
 }

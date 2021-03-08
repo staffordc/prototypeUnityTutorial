@@ -13,33 +13,35 @@ public class FlipUI : MonoBehaviour
     {
         isPaused = false;
         gameOverText.gameObject.SetActive(false);
+        menuText.gameObject.SetActive(false);
     }
+
     public void Destroy_Counter() 
     {
         destroyCounter++;
+        Debug.Log("Destroy Counter: " + destroyCounter);
         if (destroyCounter >= 3)
         {
-            gameOverText.SetActive(true);
+            gameOverText.gameObject.SetActive(true);
             Time.timeScale = 0f;
         }
-        Debug.Log("Destroy counter: " + destroyCounter);
     }
+
     void Pause()
     {
-        if (!isPaused)
+        if (isPaused == true)
         { 
-            menuText.SetActive(true); 
-            Time.timeScale = 0f; 
-            isPaused = true; 
-        }
-
-        if (isPaused)
-        { 
-            menuText.SetActive(false); 
+            menuText.gameObject.SetActive(false); 
             Time.timeScale = 1f; 
-            isPaused = false; 
+            isPaused = false;
+            
         }
-
+        else if (isPaused == false)
+        {
+            menuText.gameObject.SetActive(true);
+            Time.timeScale = 0f;
+            isPaused = true;
+        }
     }
 
     void Update()

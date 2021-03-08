@@ -250,9 +250,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4209418573902334170}
   - component: {fileID: 4209418573912135012}
+  - component: {fileID: 2552970473275929411}
   - component: {fileID: 734321744622629588}
   - component: {fileID: 114628539819867290}
-  - component: {fileID: 2552970473275929411}
   - component: {fileID: 114105813565346282}
   m_Layer: 0
   m_Name: DeerFem
@@ -304,6 +304,19 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &2552970473275929411
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4209418573902589500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16155712, y: 0.37481657, z: 0.4107215}
+  m_Center: {x: -0.0029800117, y: 0.18518999, z: 0.05017476}
 --- !u!114 &734321744622629588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,20 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53913d73a09f8a488a0c11c102a22c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offScreen: 30
---- !u!65 &2552970473275929411
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4209418573902589500}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.16155712, y: 0.37481657, z: 0.4107215}
-  m_Center: {x: -0.0029800117, y: 0.18518999, z: 0.05017476}
+  topScreen: 25
+  botScreen: -20
 --- !u!114 &114105813565346282
 MonoBehaviour:
   m_ObjectHideFlags: 0

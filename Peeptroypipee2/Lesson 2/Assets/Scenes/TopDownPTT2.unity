@@ -219,7 +219,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97564383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18934584, y: 6.6567574, z: 12.91034}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1122,9 +1122,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   speed: 10
-  posX: 0
-  posY: 0
-  posZ: 0
   xRange: 10
   projectilePrefabRed: {fileID: 1022130831215504553, guid: 796a96a5ddabd5646b0685a789de9598,
     type: 3}

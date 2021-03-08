@@ -810,9 +810,9 @@ GameObject:
   m_Component:
   - component: {fileID: 790076911750641374}
   - component: {fileID: 790076911760252626}
+  - component: {fileID: 5781541296673650912}
   - component: {fileID: 5644198047687981387}
   - component: {fileID: 114517566885209014}
-  - component: {fileID: 5781541296673650912}
   - component: {fileID: 114976131538219476}
   m_Layer: 0
   m_Name: StagMasc
@@ -864,6 +864,19 @@ Animator:
   m_HasTransformHierarchy: 0
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &5781541296673650912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790076911750935636}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.13709643, y: 0.46397826, z: 0.40214193}
+  m_Center: {x: -0.00075272, y: 0.23036242, z: 0.04291929}
 --- !u!114 &5644198047687981387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,20 +902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53913d73a09f8a488a0c11c102a22c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offScreen: 30
---- !u!65 &5781541296673650912
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790076911750935636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.13709643, y: 0.46397826, z: 0.40214193}
-  m_Center: {x: -0.00075272, y: 0.23036242, z: 0.04291929}
+  topScreen: 25
+  botScreen: -20
 --- !u!114 &114976131538219476
 MonoBehaviour:
   m_ObjectHideFlags: 0
