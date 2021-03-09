@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    public float offScreen;
-    // Start is called before the first frame update
+    FlipUI flipUI;
+    public float topScreen = 30;
+    public float botScreen = -20;
+   
     void Start()
     {
-        
+        flipUI = FindObjectOfType<FlipUI>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float positionZed = gameObject.transform.position.z;
 
-        if (positionZed >= offScreen || positionZed <= -offScreen)
+        if (positionZed >= topScreen || positionZed <= botScreen)
         {
             Destroy(gameObject);
+
+            if (positionZed < -10)
+            {
+                flipUI.Destroy_Counter();
+            }
         }
     }
 }

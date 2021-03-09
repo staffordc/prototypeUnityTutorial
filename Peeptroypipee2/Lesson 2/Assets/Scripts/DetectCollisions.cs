@@ -4,19 +4,6 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    float positionZed;
-    float posScreen;
-
-    void Start()
-    {
-        posScreen = FindObjectOfType<DestroyOutOfBounds>().offScreen;
-    }
-
-    void Update()
-    {
-        positionZed = gameObject.transform.position.z;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (positionZed <= posScreen || positionZed >= posScreen)
